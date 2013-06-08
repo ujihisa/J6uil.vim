@@ -187,7 +187,7 @@ function! s:update_message(message, line_expr, cnt)
     let nickname = s:config().blank_nickname
   else
     let s:before_msg_user = nickname
-    let nickname = (s:is_display_icon() ?  ' ' : '') . s:ljust(nickname, 12) . (s:is_display_icon() ?  '' : ' ') . ' : '
+    let nickname = (s:is_display_icon() ?  ' ' : '') . s:ljust(nickname . ':', 12) . (s:is_display_icon() ?  '' : ' ')
   endif
 
   if getline(1) == ''
